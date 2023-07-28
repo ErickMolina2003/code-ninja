@@ -5,12 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SignUpComponent } from './componets/sign-up/sign-up.component';
 import { LoginComponent } from './componets/login/login.component';
+import { ProfileComponent } from './componets/profile/profile.component';
+import { ColorhighlightComponent } from './componets/colorhighlight/colorhighlight.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SignUpComponent,
-    LoginComponent
+    LoginComponent,
+    ProfileComponent,
+    ColorhighlightComponent
   ],
   imports: [
     BrowserModule,

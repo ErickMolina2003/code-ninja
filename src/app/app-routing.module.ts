@@ -5,6 +5,7 @@ import { LandingPageComponent } from './components/landing-page/landing-page.com
 import { LoginComponent } from './components/login/login.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { CarpetasComponent } from './components/carpetas/carpetas.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,10 @@ const routes: Routes = [
       {
         path: 'profile',
         component: ProfileComponent,
+      },
+      {
+        path: 'carpetas',
+        component: CarpetasComponent,
       },
     ],
   },

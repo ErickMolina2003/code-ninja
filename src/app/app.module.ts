@@ -13,6 +13,7 @@ import { LandingPageComponent } from './components/landing-page/landing-page.com
 import { MainLayoutComponent } from './components/main-layout/main-layout.component';
 import { CarpetasComponent } from './components/carpetas/carpetas.component';
 import { CodeComponent } from './components/code/code.component';
+import { ArchivosComponent } from './components/archivos/archivos.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { CodeComponent } from './components/code/code.component';
     MainLayoutComponent,
     CarpetasComponent,
     CodeComponent,
+    ArchivosComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

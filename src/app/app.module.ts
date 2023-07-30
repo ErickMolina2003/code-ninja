@@ -3,11 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SignUpComponent } from './componets/sign-up/sign-up.component';
-import { LoginComponent } from './componets/login/login.component';
-import { ProfileComponent } from './componets/profile/profile.component';
 import { ColorhighlightComponent } from './componets/colorhighlight/colorhighlight.component';
 import { PlansComponent } from './componets/plans/plans.component';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { LoginComponent } from './components/login/login.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { LandingPageComponent } from './components/landing-page/landing-page.component';
+import { MainLayoutComponent } from './components/main-layout/main-layout.component';
 
 @NgModule({
   declarations: [
@@ -16,13 +19,16 @@ import { PlansComponent } from './componets/plans/plans.component';
     LoginComponent,
     ProfileComponent,
     ColorhighlightComponent,
-    PlansComponent
+    PlansComponent,
+    SidebarComponent,
+    LandingPageComponent,
+    MainLayoutComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

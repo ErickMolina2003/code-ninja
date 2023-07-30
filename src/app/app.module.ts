@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ColorhighlightComponent } from './componets/colorhighlight/colorhighlight.component';
+import { PlansComponent } from './componets/plans/plans.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { LoginComponent } from './components/login/login.component';
 import { ProfileComponent } from './components/profile/profile.component';
@@ -16,11 +18,16 @@ import { MainLayoutComponent } from './components/main-layout/main-layout.compon
     SignUpComponent,
     LoginComponent,
     ProfileComponent,
+    ColorhighlightComponent,
+    PlansComponent,
     SidebarComponent,
     LandingPageComponent,
     MainLayoutComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

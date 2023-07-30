@@ -1,0 +1,39 @@
+<div class="divprincipal">
+    <div class="divperfil">
+        <div class="profile-image">
+            <img src="../assets/img/facebooklogo.png" alt="Foto de perfil">
+        </div>
+        <div class="user-info">
+            <h1>Nombre de Usuario</h1>
+            <p>Correo Electrónico</p>
+        </div>
+    </div>
+    <div class="divintroduccion">
+        <h2>Introducción</h2>
+        <label for="Nombres">Nombre Completo</label> <input id="Nombres" class="input1" type="text">
+        <label for="Email">Correo Electronico</label> <input id="Email"  class="input1" type="text">
+        <label for="password1">Contraseña</label> <input id="password1"  class="input1" type="text">
+        <label for="Biografia">Biografia</label> <textarea id="Biografia" rows="4" cols="50"></textarea>
+        <div class="guardarfoto">
+            <label>Foto de Perfil</label>
+            <div class="profile-image">
+                <img [src]="profileImageURL" alt="Foto de perfil">
+            </div>
+            <button type="button" class="btn btn-warning" (click)="removeProfilePhoto()">Eliminar Foto</button>
+            <button type="button" class="btn btn-success"><input class="file1" type="file" accept="image/*" (change)="onFileSelected($event)"></button>
+        </div>
+    </div>
+    <div class="divempresa">
+        <h2>Información de la Empresa</h2>
+        <label for="Profesion">Profesion</label> <input id="Profesion"class="input1"  type="text">
+        <label for="Industria">Industria</label> <input id="Industria" class="input1"  type="text">
+        <label for="Situacion">Situacion Laboral</label> <input id="Situacion" class="input1"  type="text">
+        <label for="Enlace">Enlace</label> <input id="Enlace" class="input1"  type="url">
+    </div>
+    <div class="divfoot">
+        <button type="button" class="btn btn-warning">Eliminar Cuenta</button>
+        <button type="button" class="btn btn-success">Guardar Cambios</button>
+    </div>
+</div>
+
+

@@ -12,6 +12,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { MainLayoutComponent } from './components/main-layout/main-layout.component';
 import { CarpetasComponent } from './components/carpetas/carpetas.component';
+import { CodeComponent } from './components/code/code.component';
 
 @NgModule({
   declarations: [
@@ -25,11 +26,9 @@ import { CarpetasComponent } from './components/carpetas/carpetas.component';
     LandingPageComponent,
     MainLayoutComponent,
     CarpetasComponent,
+    CodeComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
 })

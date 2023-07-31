@@ -8,6 +8,8 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { CarpetasComponent } from './components/carpetas/carpetas.component';
 import { CodeComponent } from './components/code/code.component';
 import { ArchivosComponent } from './components/archivos/archivos.component';
+import { ColorhighlightComponent } from './components/colorhighlight/colorhighlight.component';
+import { PlansComponent } from './components/plans/plans.component';
 
 const routes: Routes = [
   {
@@ -31,7 +33,7 @@ const routes: Routes = [
         component: ProfileComponent,
       },
       {
-        path: 'carpetas',
+        path: 'folders',
         component: CarpetasComponent,
       },
       {
@@ -39,8 +41,16 @@ const routes: Routes = [
         component: CodeComponent,
       },
       {
-        path: 'archivos',
+        path: 'files',
         component: ArchivosComponent,
+      },
+      {
+        path: 'color',
+        component: ColorhighlightComponent,
+      },
+      {
+        path: 'plans',
+        component: PlansComponent,
       },
     ],
   },

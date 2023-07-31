@@ -6,13 +6,20 @@
 	justify-content:space-around;
 	align-items: center;
 	align-content: center;
-    height: 80vh; /* Ajustar el alto para centrar verticalmente */
-    margin-top: 100px;
+    height: 100vh;
+    margin-top: 80px;
+    gap: 20px;
   }
   
   .left-div {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+	  align-items: center;
+	  align-content: center;
+    margin-top: 20px;
+    
+
   }
   .right-div{
     display: flex;
@@ -25,9 +32,11 @@
   }
   
   .theme1,.theme2,.theme3 {
-    margin-bottom: 10px;
+    margin-bottom: 60px;
     background-color: #2C303A;
-    width: 300px;
+    width: 350px;
+    padding-left: 40px;
+
   }
   
   label {

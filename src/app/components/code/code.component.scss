@@ -1,0 +1,29 @@
+.code-container {
+  width: 100%;
+  position: relative;
+}
+
+.code-area {
+  border: 7px solid #d9d9d9;
+  background-color: #131417;
+  width: 100%;
+  height: 45vh;
+  background-repeat: no-repeat;
+  background-position: bottom right; /* Coloca la imagen en la esquina inferior izquierda */
+  background-size: 30px; /* Ajusta el tamaño de la imagen según tus necesidades */
+  padding-left: 30px; /* Ajusta este valor para dejar espacio para la imagen */
+  padding-bottom: 40px;
+  color: white;
+}
+
+.image-1 {
+  background-image: url("../../../assets/img/html.svg"); /* Reemplaza 'ruta/de/la/imagen.png' con la ruta de tu imagen */
+}
+
+.image-2 {
+  background-image: url("../../../assets/img/javascript.svg"); /* Reemplaza 'ruta/de/la/imagen.png' con la ruta de tu imagen */
+}
+
+.image-3 {
+  background-image: url("../../../assets/img/css.svg"); /* Reemplaza 'ruta/de/la/imagen.png' con la ruta de tu imagen */
+}

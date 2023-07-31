@@ -6,6 +6,7 @@ import { LoginComponent } from './components/login/login.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { CarpetasComponent } from './components/carpetas/carpetas.component';
+import { CodeComponent } from './components/code/code.component';
 
 const routes: Routes = [
   {
@@ -31,6 +32,10 @@ const routes: Routes = [
       {
         path: 'carpetas',
         component: CarpetasComponent,
+      },
+      {
+        path: 'code',
+        component: CodeComponent,
       },
     ],
   },

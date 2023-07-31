@@ -11,6 +11,7 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { MainLayoutComponent } from './components/main-layout/main-layout.component';
+import { CarpetasComponent } from './components/carpetas/carpetas.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { MainLayoutComponent } from './components/main-layout/main-layout.compon
     SidebarComponent,
     LandingPageComponent,
     MainLayoutComponent,
+    CarpetasComponent,
   ],
   imports: [
     BrowserModule,

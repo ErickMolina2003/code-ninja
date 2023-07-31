@@ -19,8 +19,24 @@
 
 .try-btn {
   font-size: 1rem;
+  background-color: black;
+  color: #ffff;
+  border: 1px solid #ffff;
 }
 
 h6 {
   cursor: pointer;
+}
+
+.share-modal {
+  background-color: #2c303a;
+  color: white;
+}
+
+.sidebar-options {
+  cursor: pointer;
+}
+
+.snippet-select {
+  width: 100%;
 }

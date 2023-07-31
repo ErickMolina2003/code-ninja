@@ -14,6 +14,7 @@ import { MainLayoutComponent } from './components/main-layout/main-layout.compon
 import { CarpetasComponent } from './components/carpetas/carpetas.component';
 import { CodeComponent } from './components/code/code.component';
 import { ArchivosComponent } from './components/archivos/archivos.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,7 @@ import { ArchivosComponent } from './components/archivos/archivos.component';
     CodeComponent,
     ArchivosComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

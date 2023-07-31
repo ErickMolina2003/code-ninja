@@ -92,6 +92,8 @@
       </div>
       <div
         class="col-auto d-flex flex-column align-items-center mb-3 sidebar-options"
+        data-toggle="modal"
+        data-target="#snippetModal"
       >
         <img class="logoCodeninja" src="../assets/img/snippet.svg" alt="logo" />
         <h6 class="text-white">Snippet</h6>
@@ -189,6 +191,52 @@
             </button>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  class="modal fade"
+  id="snippetModal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content share-modal">
+      <div
+        class="modal-header border-0 text-white text-center align-items-center"
+      >
+        <img class="logoCodeninja" src="../assets/img/folder.svg" alt="logo" />
+        <h5 class="modal-title" id="exampleModalLabel">Proyecto1.rar</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row justify-content-cente">
+          <div class="col-12">
+            <select class="form-select snippet-select" aria-label="Default select example">
+              <option selected>Crear Snippet</option>
+              <option value="1">HTML</option>
+              <option value="2">CSS</option>
+              <option value="3">JS</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer border-0">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">
+          Cancelar
+        </button>
+        <button type="button" class="btn btn-success" data-dismiss="modal">Crear</button>
       </div>
     </div>
   </div>

@@ -39,4 +39,9 @@ export class SidebarComponent {
       this.profileOptions = true;
     }
   }
+
+  navegarLandingpage() {
+      this.route.navigate(['/']);
+    }
+
 }

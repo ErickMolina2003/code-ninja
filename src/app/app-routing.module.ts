@@ -52,6 +52,12 @@ const routes: Routes = [
         path: 'plans',
         component: PlansComponent,
       },
+      { path: 'profile/:userId',
+       component: ProfileComponent 
+      },
+      { path: 'folders/:userId',
+       component: CarpetasComponent
+      }
     ],
   },
 ];

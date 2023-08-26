@@ -16,6 +16,9 @@ import { CodeComponent } from './components/code/code.component';
 import { ArchivosComponent } from './components/archivos/archivos.component';
 import { FormsModule } from '@angular/forms';
 
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { CarpetaComponent } from './carpeta/carpeta.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,8 +33,9 @@ import { FormsModule } from '@angular/forms';
     CarpetasComponent,
     CodeComponent,
     ArchivosComponent,
+    CarpetaComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule,ReactiveFormsModule,HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })

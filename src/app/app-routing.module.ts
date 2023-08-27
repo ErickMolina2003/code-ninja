@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MainLayoutComponent } from './components/main-layout/main-layout.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
@@ -39,6 +39,12 @@ const routes: Routes = [
       {
         path: 'code',
         component: CodeComponent,
+        children: [
+          {
+            path: '**',
+            component: CodeComponent,
+          },
+        ],
       },
       {
         path: 'files',
@@ -52,12 +58,8 @@ const routes: Routes = [
         path: 'plans',
         component: PlansComponent,
       },
-      { path: 'profile/:userId',
-       component: ProfileComponent 
-      },
-      { path: 'folders/:userId',
-       component: CarpetasComponent
-      }
+      { path: 'profile/:userId', component: ProfileComponent },
+      { path: 'folders/:userId', component: CarpetasComponent },
     ],
   },
 ];

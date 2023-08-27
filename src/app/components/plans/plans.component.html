@@ -3,51 +3,10 @@
         <h1 class="title">Planes CodeNinja</h1>
     </div>
     <div class="container">
-        <div class="card" style="width: 18rem;">
-            <h1>Plan Gratuito</h1>
-            <ul>
-                <li>Editor de código en vivo</li>
-                <li>Acceso a proyectos públicos
-                    Colaboración con otros desarrolladores</li>
-                <li>Almacenamiento de 5 proyectos</li>
-            </ul>
-            <br><br>
-            <h1>Gratis</h1>
-        </div>
-        <div class="card"style="width: 18rem;">
-            <h1>Plan Avanzado</h1>
-            <ul>
-                <li>Todas las funcionalidades del plan Gratuito</li>
-                <li>Almacenamiento extendido de 15  proyectos</li>
-                <li>Personalización de perfil</li>
-                <li>Acceso a la galería de proyectos destacados</li>
-            </ul>
-            <h2 class="precio">4.99$</h2>
-            <button type="button" class="btn btn-warning">Suscribirse</button>
-        </div>
-        <div class="card"style="width: 18rem;">
-            <h1>Plan Premium</h1>
-            <ul>
-                <li>Todas las funcionalidades del plan básico</li>
-                <li>Colaboración en tiempo real</li>
-                <li>Acceso a características beta</li>
-                <li>Soporte técnico prioritario</li>
-                <li>Almacenamiento y creacion de 50 proyectos</li>
-            </ul>
-            <h2 class="precio">14.99$</h2>
-            <button type="button" class="btn btn-warning">Suscribirse</button>
-        </div>
-        <div class="card"style="width: 18rem;">
-            <h1>Plan Empresarial</h1>
-            <ul>
-                <li>Todas las funcionalidades del plan Pro</li>
-                <li>Informes personalizados</li>
-                <li>Acceso prioritario a nuevas funcionalidades</li>
-                <li>Asistencia dedicada</li>
-                <li>Almacenamiento y creacion de proyectos ilimitados</li>
-            </ul>
-            <h2 class="precio">29.99$</h2>
-            <button type="button" class="btn btn-warning">Suscribirse</button>
-        </div>
-    </div>
+       <app-plan
+       *ngFor="let plan of plansData"
+       [planData]="plan"
+       [userSubscribedPlans]="userSubscribedPlans"
+       [User]="User"
+       ></app-plan>
 </div>

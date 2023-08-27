@@ -105,3 +105,15 @@ border-radius: 8px;
     height: 50px;
     width: 80px;
 }
+
+.alert {
+    position: fixed;
+    top: 20px;
+    right: 20px; 
+    z-index: 9999; 
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    font-size: 14px;
+}

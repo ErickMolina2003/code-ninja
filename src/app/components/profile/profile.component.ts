@@ -36,6 +36,7 @@ userId!: string;
 ngOnInit(): void {
     this.route.params.subscribe(params => {
     this.userId = params['userId'];
+    window.localStorage.setItem('userId', this.userId);
     this.fetchUserData(this.userId);
     });
   }

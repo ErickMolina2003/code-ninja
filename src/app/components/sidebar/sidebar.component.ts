@@ -13,7 +13,7 @@ export class SidebarComponent {
   codeOptions = false;
   profileOptions = false;
   @Output() downloadEvent = new EventEmitter<boolean>();
-
+  userId: string = '';
 
   constructor(private route: Router, private watchRoute: ActivatedRoute, private communicationService: CommunicationService ) {
 
@@ -30,7 +30,10 @@ export class SidebarComponent {
   } 
 
   ngOnInit() {
-  
+    this.watchRoute.params.subscribe(params => {
+      this.userId = params['userId'];
+      console.log(this.userId);
+      });
   }
 
   validateRoute (currentPath : string){
@@ -74,5 +77,19 @@ export class SidebarComponent {
 
   navegarLandingpage() {
     this.route.navigate(['/']);
+  }
+
+  navegarFolder() {
+    this.route.navigate(['folders', window.localStorage.getItem('userId')]);
+  }
+
+  navegarPlanes() {
+    this.route.navigate(['plans', window.localStorage.getItem('userId')]);
+  }
+  navegarColor() {
+    this.route.navigate(['color', window.localStorage.getItem('userId')]);
+  }
+  navegarPerfil() {
+    this.route.navigate(['profile', window.localStorage.getItem('userId')]);
   }
 }

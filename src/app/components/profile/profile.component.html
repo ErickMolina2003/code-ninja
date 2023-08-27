@@ -2,7 +2,7 @@
    <div class="divprincipal">
     <div class="divperfil">
         <div class="profile-image">
-            <img src="../assets/img/facebooklogo.png" alt="Foto de perfil">
+            <img src="../assets/img/Usuario.png" alt="Foto de perfil">
         </div>
         <div class="user-info">
             <h1>{{ userData.nombreUsuario }}</h1>
@@ -45,7 +45,20 @@
             <button type="button" (click)= "actulizarDatos()" class="btn btn-success">Guardar Cambios</button>
      </div> 
 
+
+   
+    <div *ngIf="mostrarAlerta" class="alert alert-danger mt-2">
+         No se puede dejar los campos correo electronico y contraseña vacios
+    </div>
+    <div *ngIf="mostrarAlerta1" class="alert alert-success mt-2">
+         USUARIO ELIMINADO
+    </div>
+     <div *ngIf="mostrarAlerta2" class="alert alert-success mt-2">
+         DATOS DEL USUARIO ACTUALIZADOS
+    </div>
+
 </div> 
+
 </form>
 
 

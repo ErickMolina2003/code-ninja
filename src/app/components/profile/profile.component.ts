@@ -10,15 +10,18 @@ import { Router } from '@angular/router';
 })
 export class ProfileComponent implements OnInit {
 userData: any = {}
-profileImageURL: string = '../assets/img/facebooklogo.png'; // Ruta de la foto de perfil actual
+profileImageURL: string = '../assets/img/Usuario.png'; 
+mostrarAlerta = false;
+mostrarAlerta1 = false;
+mostrarAlerta2 = false;
 
 formularioRegistro = new FormGroup({
   nombreUsuario: new FormControl(''),
-  contraseña: new FormControl(''),
+  contraseña: new FormControl('',[Validators.required]),
   biografia: new FormControl(''),
   nombre: new FormControl(''),
   apellido: new FormControl(''),
-  correo: new FormControl(''),
+  correo: new FormControl('',[Validators.required]),
   profesion: new FormControl(''),
   industria: new FormControl(''),
   situacion: new FormControl(''),
@@ -38,7 +41,6 @@ ngOnInit(): void {
   }
 
 fetchUserData(userId: string): void {
-    // Make an HTTP GET request to your backend API to fetch user data
     this.httpClient.get('http://localhost:8888/usuarios/'+ userId)
       .subscribe(
         (userData: any) => {
@@ -84,12 +86,24 @@ fetchUserData(userId: string): void {
       .subscribe(
         response => {
           console.log('los datos del usuario fueron actualizados', response);
-          this.router.navigate(['/profile', this.userId]);
+          this.mostrarAlerta2 = true;
+
+            setTimeout(() => {
+             this.mostrarAlerta2 = false;
+             this.router.navigate(['/profile', this.userId]);
+            }, 1000);
+          
         },
         error => {
           console.error('Error al actulizar los datos del usuario', error);
         }
       );
+  }
+  else{
+    this.mostrarAlerta = true;
+    setTimeout(() => {
+      this.mostrarAlerta = false;
+    }, 3000);
   }
 }
   
@@ -98,7 +112,11 @@ eliminarUsuario(): void {
     .subscribe(
       response => {
         console.log('Usuario eliminado', response);
-        this.router.navigate(['/']); // Redirect to a different route after deletion
+        this.mostrarAlerta1 = true;
+
+            setTimeout(() => {
+              this.router.navigate(['/']);
+            }, 1000);
       },
       error => {
         console.error('Error al eliminar el usuario', error);
@@ -139,9 +157,6 @@ eliminarUsuario(): void {
     const file = inputElement.files?.[0];
 
     if (file) {
-      // Aquí puedes enviar el archivo al servidor si es necesario
-      // y obtener la URL de la imagen almacenada para actualizar profileImageURL
-      // Por ahora, simplemente mostraremos la imagen seleccionada en la vista
       const reader = new FileReader();
       reader.onload = () => {
         this.profileImageURL = reader.result as string;
@@ -152,7 +167,7 @@ eliminarUsuario(): void {
 
   // Función para eliminar la foto de perfil actual
   removeProfilePhoto(): void {
-    this.profileImageURL = '../assets/img/facebooklogo.png'; // Reestablecer a la imagen por defecto
+    this.profileImageURL = '../assets/img/Usuario.png'; // Reestablecer a la imagen por defecto
   }
 
   // Función para guardar los cambios (aquí debes implementar el envío al servidor si es necesario)

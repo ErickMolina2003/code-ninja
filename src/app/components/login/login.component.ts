@@ -9,7 +9,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  
+  mostrarAlerta = false;
+  mostrarAlerta1 = false;
   formularioRegistro = new FormGroup({
     nombreUsuario: new FormControl('', [Validators.required]),
     contraseña: new FormControl('', [Validators.required])
@@ -35,9 +36,18 @@ export class LoginComponent implements OnInit {
           if (res.mensaje === 'Inicio de sesión exitoso') {
             const userId = res.userData.userId;
             console.log(userId)
-            this.router.navigate(['/profile',userId]);
+            this.mostrarAlerta1 = true;
+
+            setTimeout(() => {
+              this.router.navigate(['profile', userId]);
+            }, 1000);
           } else {
+            this.mostrarAlerta = true;
             console.log('Credenciales inválidas');
+            this.formularioRegistro.reset()
+            setTimeout(() => {
+              this.mostrarAlerta = false;
+            }, 3000);
           }
         });
     } else {

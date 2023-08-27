@@ -11,7 +11,6 @@ import { ArchivosComponent } from './components/archivos/archivos.component';
 import { ColorhighlightComponent } from './components/colorhighlight/colorhighlight.component';
 import { PlansComponent } from './components/plans/plans.component';
 import { MonacoEditorComponent } from './components/monaco-editor/monaco-editor.component';
-
 const routes: Routes = [
   {
     path: '',
@@ -63,8 +62,21 @@ const routes: Routes = [
         path: 'plans',
         component: PlansComponent,
       },
-      { path: 'profile/:userId', component: ProfileComponent },
-      { path: 'folders/:userId', component: CarpetasComponent },
+      { path: 'profile/:userId',
+       component: ProfileComponent 
+      },
+      { path: 'folders/:userId',
+       component: CarpetasComponent
+      },
+      { path: 'plans/:userId',
+      component: PlansComponent
+      },
+      { path: 'files/:folderId',
+      component: ArchivosComponent
+      },
+      { path: 'code/:ProyectId',
+      component: CodeComponent
+      }
     ],
   },
 ];

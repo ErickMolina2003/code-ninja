@@ -6,9 +6,11 @@
     <div class="divsection">
         <div class="div1">
             <h1>Log In</h1>
+            <a href="https://es-la.facebook.com/">
             <button class="btn1">
                 <img class="logo" src="../assets/img/facebooklogo.png" alt="facebook">Inicia con Facebook
             </button>
+            </a>
         </div >
 
         <div class="divider"></div>   
@@ -27,4 +29,13 @@
     <div class="divfoot">
         <p class="p1">Necesitas una cuenta? <a class="link" href="" routerLink="/signup">Crea una cuenta ahora!</a></p>   
     </div>
+    <div *ngIf="mostrarAlerta" class="alert alert-danger mt-2">
+        Usuario o contraseña incorrectos. Por favor, inténtalo de nuevo.
+    </div>  
+    <div *ngIf="mostrarAlerta1" class="alert alert-success mt-2">
+         INGRESO DE USUARIO EXITOSO-- BIENVENIDO
+    </div>
 </div>    
+
+
+

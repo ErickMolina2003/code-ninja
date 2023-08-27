@@ -1,4 +1,10 @@
 .container {
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-items: baseline;
+	align-content: center;
     margin: 0 auto;
     margin-top: 80px;
     width: 900px;
@@ -11,6 +17,7 @@
     font-weight: bold;
     text-align: center;
     margin-bottom: 20px;
+    width: 900px;
 }
 
 .titulo{
@@ -80,6 +87,24 @@
 	justify-content: center;
 	align-items: stretch;
 	align-content: space-around;
+    width: 800px;
     
 } 
 
+.btn-success{
+    background-color: #47CF73;
+    margin: 10px;
+    font-weight: bold;
+ }
+
+ .alert {
+    position: fixed;
+    top: 20px; /* Ajusta esta distancia según tus preferencias */
+    right: 20px; /* Ajusta esta distancia según tus preferencias */
+    z-index: 9999; /* Asegura que las alertas estén por encima de otros elementos */
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    font-size: 14px;
+}

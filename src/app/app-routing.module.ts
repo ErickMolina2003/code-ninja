@@ -76,6 +76,9 @@ const routes: Routes = [
       },
       { path: 'code/:ProyectId',
       component: CodeComponent
+      },
+      { path: 'color/:userId',
+      component: ColorhighlightComponent
       }
     ],
   },

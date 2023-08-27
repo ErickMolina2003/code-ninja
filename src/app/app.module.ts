@@ -19,6 +19,10 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CarpetaComponent } from './carpeta/carpeta.component';
+
+// import { MonacoEditorModule } from 'ngx-monaco-editor';
+import { MonacoEditorComponent } from './components/monaco-editor/monaco-editor.component';
+import { MonacoEditorModule, MONACO_PATH } from '@materia-ui/ngx-monaco-editor';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,9 +38,22 @@ import { CarpetaComponent } from './carpeta/carpeta.component';
     CodeComponent,
     ArchivosComponent,
     CarpetaComponent,
+    MonacoEditorComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule,ReactiveFormsModule,HttpClientModule],
-  providers: [],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    MonacoEditorModule,
+  ],
+  providers: [
+    {
+      provide: MONACO_PATH,
+      useValue: 'https://unpkg.com/monaco-editor@0.36.1/min/vs',
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

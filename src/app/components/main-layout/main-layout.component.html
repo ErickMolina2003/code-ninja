@@ -1,7 +1,7 @@
 <div class="main-layout">
   <div class="row">
     <div class="col-2">
-      <app-sidebar class="main-layout-sidebar"></app-sidebar>
+      <app-sidebar class="main-layout-sidebar" (downloadEvent)="handleDownloadEvent($event)"></app-sidebar>
     </div>
     <div class="col-10">
       <router-outlet></router-outlet>

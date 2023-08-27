@@ -13,17 +13,18 @@
 
         <div class="divider"></div>   
         
+        <form [formGroup]='formularioRegistro'>
         <div class="div2">
             <label class="l1" for="username1">Usuario</label>
-            <input class="input1" id="username1" type="text">
+            <input formControlName="nombreUsuario"  class="input1" id="username1" type="text" required>
 
             <label class="l1" for="password1">Contraseña</label>
-            <input class="input1" id="password1" type="password">
-
-            <button type="button" class="btn btn-primary">Log In</button>
+            <input formControlName="contraseña" class="input1" id="password1" type="password" required>
+            <button type="button" (click)= "logIn()"class="btn btn-primary">Log In</button> 
         </div>
+        </form>
     </div>
     <div class="divfoot">
-        <p class="p1">Necesitas una cuenta? <a class="link" href="">Crea una cuenta ahora!</a></p>   
+        <p class="p1">Necesitas una cuenta? <a class="link" href="" routerLink="/signup">Crea una cuenta ahora!</a></p>   
     </div>
 </div>    

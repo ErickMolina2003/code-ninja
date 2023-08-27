@@ -1,34 +1,29 @@
 <div class="container my-4">
-  <div class="row">
+  <section>
     <div class="col px-0 code-container">
-      <textarea
-        class="form-control code-area image-1"
-        id="exampleFormControlTextarea1"
-        rows="3"
-      ></textarea>
+      <ngx-monaco-editor
+        class="code-area image-1"
+        [options]="editorOptionsHtml"
+        [(ngModel)]="htmlCode"
+        id="html"
+      ></ngx-monaco-editor>
     </div>
     <div class="col px-0 code-container">
-      <textarea
-        class="form-control code-area image-2"
-        id="exampleFormControlTextarea1"
-        rows="3"
-      ></textarea>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col px-0 code-container">
-      <textarea
-        class="form-control code-area image-3"
-        id="exampleFormControlTextarea1"
-        rows="3"
-      ></textarea>
+      <ngx-monaco-editor
+        class="code-area image-2"
+        [options]="editorOptionsJS"
+        [(ngModel)]="jsCode"
+        id="js"
+      ></ngx-monaco-editor>
     </div>
     <div class="col px-0 code-container">
-      <textarea
-        class="form-control code-area"
-        id="exampleFormControlTextarea1"
-        rows="3"
-      ></textarea>
+      <ngx-monaco-editor
+        class="code-area image-3"
+        [options]="editorOptionsCSS"
+        [(ngModel)]="cssCode"
+        id="css"
+      ></ngx-monaco-editor>
     </div>
-  </div>
+    <iframe srcdoc="<h1>Hola srcdo</h1>"></iframe>
+  </section>
 </div>

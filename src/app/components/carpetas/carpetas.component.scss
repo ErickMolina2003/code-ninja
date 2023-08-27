@@ -1,7 +1,7 @@
 .container {
     margin: 0 auto;
     margin-top: 80px;
-    width: 800px;
+    width: 900px;
     padding: 20px;
     border-radius: 5px;
 }
@@ -24,6 +24,7 @@
     margin-bottom: 20px;
     background-color: #2C303A;
     height: 100px;
+    width: 900px;
 }
 
 .search-bar input {
@@ -36,10 +37,49 @@
 .create {
     text-align: center;
     background-color: #2C303A;
+    width: 900px;
 }
 
 .text1{
     color: white;
     font-size: xx-large;
 }
+
+.btn-carpeta{
+    width: 200px;
+    padding: 10px;
+    margin: 10px;
+}
+.divcrear{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: stretch;
+	align-content: center;
+}
+
+.divsec{
+    display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: stretch;
+	align-content: center;
+}
+.inputnom{
+    border-radius: 10px;
+    margin: 3px;
+}
+
+.divcarpetas{
+    margin-top: 20px ;
+    display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: stretch;
+	align-content: space-around;
+    
+} 
 

@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
+import { CommunicationService } from 'src/app/store';
 
 @Component({
   selector: 'app-sidebar',
@@ -10,8 +11,12 @@ export class SidebarComponent {
   loginOptions = false;
   codeOptions = false;
   profileOptions = false;
+  @Output() downloadEvent = new EventEmitter<boolean>();
 
-  constructor(private route: Router) {}
+  constructor(
+    private route: Router,
+    private communicationService: CommunicationService
+  ) {}
 
   ngOnInit() {
     // Obtén el path actual
@@ -38,5 +43,18 @@ export class SidebarComponent {
     ) {
       this.profileOptions = true;
     }
+  }
+
+  emitDownload() {
+    this.communicationService.emitDownloadEvent();
+    this.downloadEvent.emit(true);
+  }
+
+  emitShare() {
+    this.communicationService.emitShareEvent();
+  }
+
+  navegarLandingpage() {
+    this.route.navigate(['/']);
   }
 }

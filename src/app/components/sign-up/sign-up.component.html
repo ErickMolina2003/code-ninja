@@ -12,25 +12,27 @@
         </div >
 
         <div class="divider"></div>   
-        
-        <div class="div2">
+        <form [formGroup]='formularioRegistro' >
+         <div class="div2">
             <label class="l1" for="username1">Usuario</label>
-            <input class="input1" id="username1" type="text">
+            <input formControlName="nombreUsuario" class="input1" id="username1" type="text" required>
 
             <label class="l1" for="email1">Correo Electronico</label>
-            <input class="input1" id="email1" type="email">
+            <input  formControlName="correo" class="input1" id="email1" type="email" required>
 
             <label class="l1" for="password1">Contraseña</label>
-            <input class="input1" id="password1" type="password">
+            <input  formControlName="contraseña" class="input1" id="password1" type="password" required>
 
             <label class="l1" for="confirm_password">Confirmar Contraseña</label>
             <input class="input1" id="confirm_password" type="password">
             
-            <button type="button" class="btn btn-primary">Sign Up</button>
-        </div>
+            <button type="button"(click)= "signUp()" class="btn btn-primary">Sign Up</button>
+         </div>   
+        </form>
+        
     </div>
     <div class="divfoot">
-        <p class="p1">Ya tienes una cuenta? <a class="link" href="">Iniciar Secion ahora</a></p>   
+        <p class="p1">Ya tienes una cuenta? <a class="link" href="" routerLink="/login">Iniciar Secion ahora</a></p>   
     </div>
 </div>    
 
